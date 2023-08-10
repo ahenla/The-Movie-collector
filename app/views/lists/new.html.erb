@@ -1,0 +1,11 @@
+<div class="container">
+    <h1>Create a new list</h1>
+  <div class="row justify-content-center">
+    <div class="col-10">
+      <%= simple_form_for @list do |f| %>
+        <%= f.input :name, placeholder: 'Enter the list name...' %>
+        <%= f.submit class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>
