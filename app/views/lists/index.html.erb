@@ -1,12 +1,20 @@
-<div class="container">
-<h1>Movie Lists</h1>
-  <div class="row justify-content-center">
-    <div class="col-10">
-      <%= link_to 'Add a new list', new_list_path, class: 'btn btn-success'  %>
+<div class="banner">
+  <% image_tag "banner.jpg", alt: "banner-img"%>
+  <div class="container">
+    <h1 class="fs-1">The <strong>Movies</strong> Collector</h1>
+    <p class="ms-2"> orderyour movies in custom lists</p>
+      <div class="col-10">
+      <%= link_to 'Add a new list', new_list_path, class: 'btn btn-outline-success p-3 rounded'  %>
     </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row justify-content-center">
     <% @lists.each do |list| %>
       <div class="card col-6 rounded" style="width: 18rem;">
-  <img src="<%= list.movies[0].poster_url %>" class="card-img-top" alt="list img">
+      <% image_tag list.photo, alt: "list-img"%>
+  <%# <img src="<%= list.movies[0].poster_url %>" class="card-img-top" alt="list img"> %>
 
   <div class="card-body">
     <h5 class="card-title"><%= list.name.capitalize %></h5>
@@ -19,7 +27,7 @@
   </ul>
 
   </div>
-  <%= link_to 'details', list_path(list), class: 'btn btn-primary'  %>
+  <%= link_to 'details', list_path(list), class: 'btn btn-primary w-100'  %>
 </div>
     <% end %>
   </div>
