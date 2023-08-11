@@ -1,11 +1,11 @@
 <div class="container">
-  <div class="row">
-  <h1>Add movies to the list</h1>
-    <div class="col-6">
+  <div class="row justify-content-center">
+    <div class="col-6 bg-light mt-3 p-5 rounded">
+    <h1 class="mb-3 text-center">Add a movie to <%= @list.name.capitalize %></h1>
       <%= simple_form_for [@list, @bookmark] do |f| %>
         <%= f.association :movie, selected: :movie[0] %>
         <%= f.input :comment %>
-        <%= f.submit class: 'btn btn-danger' %>
+        <%= f.submit class: 'btn btn-outline-warning w-100 mt-2 ', value: 'add a movie' %>
       <% end %>
     </div>
   </div>

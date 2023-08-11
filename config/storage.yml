@@ -1,1 +1,3 @@
-config.active_storage.service = :cloudinary
+cloudinary:
+  service: Cloudinary
+  folder: <%= Rails.env %>
