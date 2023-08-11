@@ -5,7 +5,8 @@
       <%= simple_form_for @list do |f| %>
         <%= f.input :name, placeholder: 'Enter the list name...' %>
         <%= f.input :photo, as: :file %>
-        <%= f.submit class: 'btn btn-outline-success w-100 my-3' %>
+        <%= f.submit class: 'btn btn-outline-success w-100 my-2' %>
+        <%= link_to 'cancel', lists_path, class: 'btn btn-secondary mb-2 w-100'  %>
       <% end %>
     </div>
   </div>
