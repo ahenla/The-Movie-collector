@@ -5,18 +5,20 @@
       <%= link_to 'Add a new list', new_list_path, class: 'btn btn-success'  %>
     </div>
     <% @lists.each do |list| %>
-      <div class="card col-6" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
+      <div class="card col-6 rounded" style="width: 18rem;">
+  <img src="<%= list.movies[0].poster_url %>" class="card-img-top" alt="list img">
+
   <div class="card-body">
-    <h5 class="card-title"><%= list.name %></h5>
+    <h5 class="card-title"><%= list.name.capitalize %></h5>
     <%# <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> %>
-  </div>
+
   <ul class="list-group list-group-flush">
     <% list.movies.each do |movie| %>
       <li class="list-group-item"><%= movie.title %></li>
     <% end %>
-
   </ul>
+
+  </div>
   <%= link_to 'details', list_path(list), class: 'btn btn-primary'  %>
 </div>
     <% end %>
