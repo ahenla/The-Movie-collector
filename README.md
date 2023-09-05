@@ -1,6 +1,6 @@
-# The Movies Collector
+# The Movie Collector
 
-The Movies Collector is a web app created with ruby on rails and javascript to order favorite lists of movies based on categories
+The Movie Collector is a web app created with ruby on rails and javascript to order favorite lists of movies based on categories
 
 * ruby 3.1.2p20
 * Rails 7.0.7.2
